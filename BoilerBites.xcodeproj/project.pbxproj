@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAF93BF42AB611B3001E3FAF /* BoilerBitesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF93BF32AB611B3001E3FAF /* BoilerBitesApp.swift */; };
+		AAF93BF62AB611B3001E3FAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF93BF52AB611B3001E3FAF /* ContentView.swift */; };
+		AAF93BF82AB611B5001E3FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF93BF72AB611B5001E3FAF /* Assets.xcassets */; };
+		AAF93BFB2AB611B5001E3FAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF93BFA2AB611B5001E3FAF /* Preview Assets.xcassets */; };
+		AAF93C052AB611B6001E3FAF /* BoilerBitesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF93C042AB611B6001E3FAF /* BoilerBitesTests.swift */; };
+		AAF93C0F2AB611B6001E3FAF /* BoilerBitesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF93C0E2AB611B6001E3FAF /* BoilerBitesUITests.swift */; };
+		AAF93C112AB611B6001E3FAF /* BoilerBitesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF93C102AB611B6001E3FAF /* BoilerBitesUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAF93C012AB611B6001E3FAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF93BE82AB611B3001E3FAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAF93BEF2AB611B3001E3FAF;
+			remoteInfo = BoilerBites;
+		};
+		AAF93C0B2AB611B6001E3FAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF93BE82AB611B3001E3FAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAF93BEF2AB611B3001E3FAF;
+			remoteInfo = BoilerBites;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAF93BF02AB611B3001E3FAF /* BoilerBites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerBites.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF93BF32AB611B3001E3FAF /* BoilerBitesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerBitesApp.swift; sourceTree = "<group>"; };
+		AAF93BF52AB611B3001E3FAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAF93BF72AB611B5001E3FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAF93BFA2AB611B5001E3FAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAF93C002AB611B6001E3FAF /* BoilerBitesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoilerBitesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF93C042AB611B6001E3FAF /* BoilerBitesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerBitesTests.swift; sourceTree = "<group>"; };
+		AAF93C0A2AB611B6001E3FAF /* BoilerBitesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoilerBitesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF93C0E2AB611B6001E3FAF /* BoilerBitesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerBitesUITests.swift; sourceTree = "<group>"; };
+		AAF93C102AB611B6001E3FAF /* BoilerBitesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerBitesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAF93BED2AB611B3001E3FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF93BFD2AB611B6001E3FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF93C072AB611B6001E3FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAF93BE72AB611B3001E3FAF = {
+			isa = PBXGroup;
+			children = (
+				AAF93BF22AB611B3001E3FAF /* BoilerBites */,
+				AAF93C032AB611B6001E3FAF /* BoilerBitesTests */,
+				AAF93C0D2AB611B6001E3FAF /* BoilerBitesUITests */,
+				AAF93BF12AB611B3001E3FAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAF93BF12AB611B3001E3FAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAF93BF02AB611B3001E3FAF /* BoilerBites.app */,
+				AAF93C002AB611B6001E3FAF /* BoilerBitesTests.xctest */,
+				AAF93C0A2AB611B6001E3FAF /* BoilerBitesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAF93BF22AB611B3001E3FAF /* BoilerBites */ = {
+			isa = PBXGroup;
+			children = (
+				AAF93BF32AB611B3001E3FAF /* BoilerBitesApp.swift */,
+				AAF93BF52AB611B3001E3FAF /* ContentView.swift */,
+				AAF93BF72AB611B5001E3FAF /* Assets.xcassets */,
+				AAF93BF92AB611B5001E3FAF /* Preview Content */,
+			);
+			path = BoilerBites;
+			sourceTree = "<group>";
+		};
+		AAF93BF92AB611B5001E3FAF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AAF93BFA2AB611B5001E3FAF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAF93C032AB611B6001E3FAF /* BoilerBitesTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAF93C042AB611B6001E3FAF /* BoilerBitesTests.swift */,
+			);
+			path = BoilerBitesTests;
+			sourceTree = "<group>";
+		};
+		AAF93C0D2AB611B6001E3FAF /* BoilerBitesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AAF93C0E2AB611B6001E3FAF /* BoilerBitesUITests.swift */,
+				AAF93C102AB611B6001E3FAF /* BoilerBitesUITestsLaunchTests.swift */,
+			);
+			path = BoilerBitesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAF93BEF2AB611B3001E3FAF /* BoilerBites */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF93C142AB611B6001E3FAF /* Build configuration list for PBXNativeTarget "BoilerBites" */;
+			buildPhases = (
+				AAF93BEC2AB611B3001E3FAF /* Sources */,
+				AAF93BED2AB611B3001E3FAF /* Frameworks */,
+				AAF93BEE2AB611B3001E3FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoilerBites;
+			productName = BoilerBites;
+			productReference = AAF93BF02AB611B3001E3FAF /* BoilerBites.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAF93BFF2AB611B6001E3FAF /* BoilerBitesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF93C172AB611B6001E3FAF /* Build configuration list for PBXNativeTarget "BoilerBitesTests" */;
+			buildPhases = (
+				AAF93BFC2AB611B6001E3FAF /* Sources */,
+				AAF93BFD2AB611B6001E3FAF /* Frameworks */,
+				AAF93BFE2AB611B6001E3FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAF93C022AB611B6001E3FAF /* PBXTargetDependency */,
+			);
+			name = BoilerBitesTests;
+			productName = BoilerBitesTests;
+			productReference = AAF93C002AB611B6001E3FAF /* BoilerBitesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAF93C092AB611B6001E3FAF /* BoilerBitesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF93C1A2AB611B6001E3FAF /* Build configuration list for PBXNativeTarget "BoilerBitesUITests" */;
+			buildPhases = (
+				AAF93C062AB611B6001E3FAF /* Sources */,
+				AAF93C072AB611B6001E3FAF /* Frameworks */,
+				AAF93C082AB611B6001E3FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAF93C0C2AB611B6001E3FAF /* PBXTargetDependency */,
+			);
+			name = BoilerBitesUITests;
+			productName = BoilerBitesUITests;
+			productReference = AAF93C0A2AB611B6001E3FAF /* BoilerBitesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAF93BE82AB611B3001E3FAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					AAF93BEF2AB611B3001E3FAF = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					AAF93BFF2AB611B6001E3FAF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = AAF93BEF2AB611B3001E3FAF;
+					};
+					AAF93C092AB611B6001E3FAF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = AAF93BEF2AB611B3001E3FAF;
+					};
+				};
+			};
+			buildConfigurationList = AAF93BEB2AB611B3001E3FAF /* Build configuration list for PBXProject "BoilerBites" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAF93BE72AB611B3001E3FAF;
+			productRefGroup = AAF93BF12AB611B3001E3FAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAF93BEF2AB611B3001E3FAF /* BoilerBites */,
+				AAF93BFF2AB611B6001E3FAF /* BoilerBitesTests */,
+				AAF93C092AB611B6001E3FAF /* BoilerBitesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAF93BEE2AB611B3001E3FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF93BFB2AB611B5001E3FAF /* Preview Assets.xcassets in Resources */,
+				AAF93BF82AB611B5001E3FAF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF93BFE2AB611B6001E3FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF93C082AB611B6001E3FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAF93BEC2AB611B3001E3FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF93BF62AB611B3001E3FAF /* ContentView.swift in Sources */,
+				AAF93BF42AB611B3001E3FAF /* BoilerBitesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF93BFC2AB611B6001E3FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF93C052AB611B6001E3FAF /* BoilerBitesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF93C062AB611B6001E3FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF93C0F2AB611B6001E3FAF /* BoilerBitesUITests.swift in Sources */,
+				AAF93C112AB611B6001E3FAF /* BoilerBitesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAF93C022AB611B6001E3FAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAF93BEF2AB611B3001E3FAF /* BoilerBites */;
+			targetProxy = AAF93C012AB611B6001E3FAF /* PBXContainerItemProxy */;
+		};
+		AAF93C0C2AB611B6001E3FAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAF93BEF2AB611B3001E3FAF /* BoilerBites */;
+			targetProxy = AAF93C0B2AB611B6001E3FAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAF93C122AB611B6001E3FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAF93C132AB611B6001E3FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAF93C152AB611B6001E3FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BoilerBites/Preview Content\"";
+				DEVELOPMENT_TEAM = HLK8C3SR2N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PurdueHack.BoilerBites;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAF93C162AB611B6001E3FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BoilerBites/Preview Content\"";
+				DEVELOPMENT_TEAM = HLK8C3SR2N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PurdueHack.BoilerBites;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAF93C182AB611B6001E3FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLK8C3SR2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PurdueHack.BoilerBitesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoilerBites.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BoilerBites";
+			};
+			name = Debug;
+		};
+		AAF93C192AB611B6001E3FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLK8C3SR2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PurdueHack.BoilerBitesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoilerBites.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BoilerBites";
+			};
+			name = Release;
+		};
+		AAF93C1B2AB611B6001E3FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLK8C3SR2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PurdueHack.BoilerBitesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoilerBites;
+			};
+			name = Debug;
+		};
+		AAF93C1C2AB611B6001E3FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLK8C3SR2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PurdueHack.BoilerBitesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoilerBites;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAF93BEB2AB611B3001E3FAF /* Build configuration list for PBXProject "BoilerBites" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF93C122AB611B6001E3FAF /* Debug */,
+				AAF93C132AB611B6001E3FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF93C142AB611B6001E3FAF /* Build configuration list for PBXNativeTarget "BoilerBites" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF93C152AB611B6001E3FAF /* Debug */,
+				AAF93C162AB611B6001E3FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF93C172AB611B6001E3FAF /* Build configuration list for PBXNativeTarget "BoilerBitesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF93C182AB611B6001E3FAF /* Debug */,
+				AAF93C192AB611B6001E3FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF93C1A2AB611B6001E3FAF /* Build configuration list for PBXNativeTarget "BoilerBitesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF93C1B2AB611B6001E3FAF /* Debug */,
+				AAF93C1C2AB611B6001E3FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAF93BE82AB611B3001E3FAF /* Project object */;
+}
