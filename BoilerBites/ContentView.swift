@@ -11,6 +11,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
+                NavigationLink(destination: MyReservations()) {
+                    Text("My Reservations")
+                }
                 NavigationLink(destination: DetailView(title: "Hillenbrand")) {
                     Text("Hillenbrand")
                 }
@@ -44,7 +47,7 @@ struct DetailView: View {
             
             Spacer()
             HStack{
-                NavigationLink(destination: AvailabilityView()) {
+                NavigationLink(destination: AvailabilityView(diningHall: title)) {
                     Text("Check Availability")
                         .font(.headline)
                         .padding()
@@ -52,7 +55,7 @@ struct DetailView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                NavigationLink(destination: myView()) {
+                NavigationLink(destination: ReservationView()) {
                     Text("Make a Reservation")
                         .font(.headline)
                         .padding()
@@ -60,6 +63,7 @@ struct DetailView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                
             }
             if (title == "Hillenbrand"){
                 NavigationLink(destination: HillenbrandHoursView()) {
@@ -128,14 +132,6 @@ struct DetailView: View {
 }
 
 struct myView: View {
-    var body: some View {
-        VStack{
-            Text("oeidjfoeiwjf")
-        }
-        
-    }
-}
-struct AvailabilityView: View {
     var body: some View {
         VStack{
             Text("oeidjfoeiwjf")

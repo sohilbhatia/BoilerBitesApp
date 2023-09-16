@@ -11,9 +11,12 @@ import FirebaseDatabaseSwift
 
 class NewReservation: ObservableObject {
     private let ref = Database.database().reference()
+    @Published var reservations: [String: [String: Any]] = [:]
+    
     
     func pushNewReservation(holder: String, date: Date, numOfPeople: Int, description: String) {
         let hillenbrandRef = ref.child("Reservations").child("Hillenbrand")
+        let myRes = ref.child("My Reservations").child("Hillenbrand")
         
         // Convert date to a string
         let dateFormatter = DateFormatter()
@@ -22,6 +25,7 @@ class NewReservation: ObservableObject {
         
         // Create a unique key for the new reservation
         let reservationKey = hillenbrandRef.childByAutoId().key
+        let myKey = myRes.childByAutoId().key
         
         // Create a dictionary for the new reservation
         let reservationData: [String: Any] = [
@@ -31,8 +35,17 @@ class NewReservation: ObservableObject {
             "Description": description
         ]
         
+        let myData: [String: Any] = [
+            "Dining Hall": "Hillenbrand",
+            "Holder": holder,
+            "Date": dateString,
+            "Number of People": numOfPeople,
+            "Description": description
+        ]
+        
         // Create a child node with the unique key for the new reservation
         let newReservationRef = hillenbrandRef.child(reservationKey!)
+        let myNewReservationRef = myRes.child(myKey!)
         
         // Set the data for the new reservation node
         newReservationRef.setValue(reservationData) { (error, _) in
@@ -42,5 +55,27 @@ class NewReservation: ObservableObject {
                 print("New reservation added successfully.")
             }
         }
+        
+        myNewReservationRef.setValue(myData) { (error, _) in
+            if let error = error {
+                print("Error adding new reservation: \(error.localizedDescription)")
+            } else {
+                print("New reservation added successfully.")
+            }
+        }
     }
+    
+    func fetchReservations() {
+            let myRes = ref.child("My Reservations").child("Hillenbrand")
+
+            myRes.observeSingleEvent(of: .value) { [weak self] (snapshot) in
+                guard let self = self else { return }
+                
+                if snapshot.exists() {
+                    if let value = snapshot.value as? [String: [String: Any]] {
+                        self.reservations = value
+                    }
+                }
+            }
+        }
 }
