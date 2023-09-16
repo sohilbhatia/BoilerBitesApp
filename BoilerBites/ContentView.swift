@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: DetailView(title: "Hillenbrand")) {
+                NavigationLink(destination: ReservationView()) {
                     Text("Hillenbrand")
                 }
                 NavigationLink(destination: DetailView(title: "Wiley")) {
@@ -33,6 +33,7 @@ struct DetailView: View {
         Text(title)
             .font(.largeTitle)
             .navigationBarTitle(title)
+        
     }
 }
 
