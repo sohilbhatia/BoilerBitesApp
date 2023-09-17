@@ -28,7 +28,7 @@ struct AvailabilityView: View {
                 
             }
             Button(action: {
-                // Perform the count operation when the button is pressed
+              
                 countReservations()
             }) {
                 Text("Check Availability")
@@ -56,29 +56,28 @@ struct AvailabilityView: View {
     }
     
     func countReservations() {
-        // Reference to your Firebase Database
+        
         let ref = Database.database().reference()
+        
+        let hillenbrandRef = ref.child("Reservations").child(diningHall)
 
-        // Reference to the "Hillenbrand" node under "Reservations"
-        let hillenbrandRef = ref.child("Reservations").child("Hillenbrand")
-
-        // Use observeSingleEventOfType to fetch the data
         hillenbrandRef.observeSingleEvent(of: .value) { (snapshot) in
             if snapshot.exists() {
-                var reservationsOnDay = 0
                 
-                // Loop through the children nodes
+                var reservationsOnDay = 0
                 for child in snapshot.children {
                     if let childSnapshot = child as? DataSnapshot {
                         if let reservationData = childSnapshot.value as? [String: Any] {
-                            // Here, you can extract and work with values from each reservation
+                            
                             if let date = reservationData["Date"] as? String {
+                                print(date)
                                 let dateFormatter = DateFormatter()
                                 dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
                                 let newDate = dateFormatter.date(from: date)
                                 let components = newDate!.get(.day, .month, .year)
                                 let materials = selectedDate.get(.day, .month, .year)
-                                if components.day == materials.day {
+                                let finalDay = components.day
+                                if finalDay == materials.day {
                                     reservationsOnDay += 1
                                 }
                             }
@@ -86,21 +85,24 @@ struct AvailabilityView: View {
                     }
                 }
                 
-                // Set the number of reservations
+              
                 
                 print(reservationsOnDay)
                 
                 if reservationsOnDay >= 3 {
+                    
+                    print("More than 3 ")
                     alertTitle = "We Booked"
                     alertMessage = "We're booked"
                     showAlert = true
                     
                     // Show the alert
                 } else {
+                    print("Less than 3")
                     alertTitle = "Open!"
                     alertMessage = "We're open!"
                     showAlert = true
-                    // Show the tables open alert
+                    
                 }
             }
         }

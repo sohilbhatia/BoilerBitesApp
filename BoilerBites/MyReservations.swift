@@ -19,7 +19,7 @@ struct MyReservations: View {
                         NavigationLink(destination: ReservationDetail(reservation: reservation)) {
                             Rectangle()
                                 .fill(Color.clear)
-                                 // White background
+                                
                                 .frame(height: 60)
                                 .overlay(
                                     HStack {

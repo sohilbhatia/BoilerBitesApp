@@ -18,16 +18,15 @@ class NewReservation: ObservableObject {
         let hillenbrandRef = ref.child("Reservations").child(diningHall)
         let myRes = ref.child("My Reservations").child(diningHall)
         
-        // Convert date to a string
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         let dateString = dateFormatter.string(from: date)
-        
-        // Create a unique key for the new reservation
+ 
         let reservationKey = hillenbrandRef.childByAutoId().key
         let myKey = myRes.childByAutoId().key
         
-        // Create a dictionary for the new reservation
+      
         let reservationData: [String: Any] = [
             "Dining Hall": diningHall,
             "Holder": holder,
@@ -44,11 +43,11 @@ class NewReservation: ObservableObject {
             "Description": description
         ]
         
-        // Create a child node with the unique key for the new reservation
+        
         let newReservationRef = hillenbrandRef.child(reservationKey!)
         let myNewReservationRef = myRes.child(myKey!)
         
-        // Set the data for the new reservation node
+        
         newReservationRef.setValue(reservationData) { (error, _) in
             if let error = error {
                 print("Error adding new reservation: \(error.localizedDescription)")

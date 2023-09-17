@@ -16,7 +16,7 @@ struct ReservationDetail: View {
             Text("Reservation Details")
                 .font(.title)
 
-            // Display reservation details
+            
             Text("Dining Hall: \(reservation["Dining Hall"] as? String ?? "Unknown Dining Hall")")
             Text("Holder: \(reservation["Holder"] as? String ?? "Unknown Holder")")
             Text("Date: \(reservation["Date"] as? String ?? "")")
