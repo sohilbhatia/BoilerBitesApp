@@ -12,10 +12,22 @@ struct ContentView: View {
         NavigationView {
             
             VStack{
-                Text("Your Dining Courts")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .padding(.top)
+                HStack{
+                    NavigationLink(destination: MyReservations()) {
+                        Image("Screenshot 2023-09-16 at 10.15.50 PM")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            
+                    }
+                    .padding(.leading, 25)
+                    Spacer()
+                    Text("Your Dining Courts")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.horizontal, 25)
+                    
+                }
                 ScrollView {
                     NavigationLink(destination: HillenbrandDisplay(title: "Hillenbrand")) {
                         VStack{
@@ -460,50 +472,80 @@ struct HillenbrandHoursView: View {
             if selectedOption==0{
                 VStack{
                     Text("Brunch: 10:00 AM - 4:00 PM")
+                    
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .padding(.top, 400)
+                .foregroundColor(Color.white)
+                    
+                        
+                    
             }
             else if selectedOption==1{
                 VStack{
-                    
-                        Text("Lunch: 12:00 PM - 2:00 PM")
-                        Text("Late Lunch: 2:00 AM - 5:00 PM")
-                        Text("Dinner: 5:00 PM - 9:00 PM")
+                    Text("Lunch: 12:00 PM - 2:00 PM")
+                        .padding(.top, 400)
+                    Text("Late Lunch: 2:00 AM - 5:00 PM")
+                    Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+                
             }
             else if selectedOption==2{
                 VStack{
                     Text("Lunch: 12:00 PM - 2:00 PM")
+                        .padding(.top, 400)
                     Text("Late Lunch: 2:00 AM - 5:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==3{
                 VStack{
                     Text("Lunch: 12:00 PM - 2:00 PM")
+                        .padding(.top, 400)
                     Text("Late Lunch: 2:00 AM - 5:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+            
             }
             else if selectedOption==4{
                 VStack{
                     Text("Lunch: 12:00 PM - 2:00 PM")
+                        .padding(.top, 400)
                     Text("Late Lunch: 2:00 AM - 5:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==5{
                 VStack{
                     Text("Closed")
+                        .padding(.top, 400)
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==6{
                 VStack{
                     Text("Closed")
+                        .padding(.top, 400)
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
-            
-            
-            
             Spacer()
             Picker("Select an Option", selection: $selectedOption){
                 ForEach(0..<options.count, id: \.self) {index in
@@ -511,12 +553,15 @@ struct HillenbrandHoursView: View {
                 }
             }
             .pickerStyle(MenuPickerStyle())
-            .padding(.top, 20)
-            
-            
+            .padding(.bottom, 30)
             
         }
-        
+        .background(
+            Image("Screenshot 2023-09-16 at 8.46.25 PM")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        )
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -529,71 +574,99 @@ struct EarhartHoursView: View {
             if selectedOption==0{
                 VStack{
                     Text("Lunch: 10:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Earhart On-the-GO!")
                     Text("Closed")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==1{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Earhart On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==2{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Earhart On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==3{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Earhart On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==4{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Earhart On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==5{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Earhart On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             
             else if selectedOption==6{
                 VStack{
                     Text("Lunch: 10:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Earhart On-the-GO!")
                     Text("Closed")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             
             
@@ -604,11 +677,17 @@ struct EarhartHoursView: View {
                 }
             }
             .pickerStyle(MenuPickerStyle())
-            .padding(.top, 20)
+            .padding(.bottom, 30)
             
             
             
         }
+        .background(
+            Image("Screenshot 2023-09-16 at 8.46.25 PM")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        )
+        .edgesIgnoringSafeArea(.all)
         
     }
 }
@@ -623,49 +702,77 @@ struct WileyHoursView: View {
             if selectedOption==0{
                 VStack{
                     Text("Dinner: 5:00 PM - 9:00 PM")
+                        .padding(.top, 350)
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==1{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==2{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==3{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==4{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==5{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==6{
                 VStack{
                     
                     Text("Lunch: 11:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Dinner: 5:00 PM - 9:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             
             
@@ -677,11 +784,17 @@ struct WileyHoursView: View {
                 }
             }
             .pickerStyle(MenuPickerStyle())
-            .padding(.top, 20)
+            .padding(.bottom, 30)
             
             
             
         }
+        .background(
+            Image("Screenshot 2023-09-16 at 8.46.25 PM")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        )
+        .edgesIgnoringSafeArea(.all)
         
     }
 }
@@ -697,36 +810,49 @@ struct WindsorHoursView: View {
                 VStack{
                     
                     Text("Lunch: 11:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Windsor On-the-GO!")
                     Text("Closed")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==1{
                 VStack{
                     
                     Text("Lunch: 10:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Late Lunch: 2:00 PM - 5:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Windsor On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==2{
                 VStack{
                     Text("Lunch: 10:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Late Lunch: 2:00 PM - 5:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Windsor On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==3{
                 VStack{
                     Text("Lunch: 10:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Late Lunch: 2:00 PM - 5:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
@@ -737,32 +863,44 @@ struct WindsorHoursView: View {
             else if selectedOption==4{
                 VStack{
                     Text("Lunch: 10:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Late Lunch: 2:00 PM - 5:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Windsor On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==5{
                 VStack{
                     Text("Lunch: 10:00 AM - 2:00 PM")
+                        .padding(.top, 350)
                     Text("Late Lunch: 2:00 PM - 4:00 PM")
                     
                     Text("")
                     Text("Windsor On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==6{
                 VStack{
                     
                     Text("Late Lunch: 2:00 PM - 5:00 PM")
+                        .padding(.top, 350)
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Windsor On-the-GO!")
                     Text("Closed")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             
             
@@ -774,7 +912,7 @@ struct WindsorHoursView: View {
                 }
             }
             .pickerStyle(MenuPickerStyle())
-            .padding(.top, 20)
+            .padding(.bottom, 30)
             
             
             
@@ -792,16 +930,21 @@ struct FordHoursView: View {
             if selectedOption==0{
                 VStack{
                     Text("Breakfast: 8:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
                     Text("")
                     Text("Ford On-the-GO!")
                     Text("Closed")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==1{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Late Lunch: 2:00 PM - 4:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
@@ -809,10 +952,14 @@ struct FordHoursView: View {
                     Text("Ford On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==2{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Late Lunch: 2:00 PM - 4:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
@@ -820,10 +967,14 @@ struct FordHoursView: View {
                     Text("Ford On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==3{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Late Lunch: 2:00 PM - 4:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
@@ -831,10 +982,14 @@ struct FordHoursView: View {
                     Text("Ford On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==4{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Late Lunch: 2:00 PM - 4:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
@@ -842,10 +997,14 @@ struct FordHoursView: View {
                     Text("Ford On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==5{
                 VStack{
                     Text("Breakfast: 7:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("Late Lunch: 2:00 PM - 4:00 PM")
                     Text("Dinner: 5:00 PM - 9:00 PM")
@@ -853,15 +1012,22 @@ struct FordHoursView: View {
                     Text("Ford On-the-GO!")
                     Text("Breakfast/Lunch: 6:30 AM - 5:00 PM")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             else if selectedOption==6{
                 VStack{
                     Text("Breakfast: 8:00 AM - 10:00 AM")
+                        .padding(.top, 350)
                     Text("Lunch: 11:00 AM - 2:00 PM")
                     Text("")
                     Text("Ford On-the-GO!")
                     Text("Closed")
                 }
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
             }
             
             
@@ -873,11 +1039,18 @@ struct FordHoursView: View {
                 }
             }
             .pickerStyle(MenuPickerStyle())
-            .padding(.top, 20)
+            .padding(.bottom, 30)
             
             
             
         }
+        
+        .background(
+            Image("Screenshot 2023-09-16 at 8.46.25 PM")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        )
+        .edgesIgnoringSafeArea(.all)
         
     }
 }
