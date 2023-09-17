@@ -99,7 +99,7 @@ struct DetailView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                NavigationLink(destination: ReservationView()) {
+                NavigationLink(destination: ReservationView(diningHall: title)) {
                     Text("Make a Reservation")
                         .font(.headline)
                         .padding()
@@ -204,7 +204,7 @@ struct HillenbrandDisplay: View {
                 .font(.title3)
                 .fontWeight(.bold)
                 .padding(.top)
-            NavigationLink(destination: ReservationView()) {
+            NavigationLink(destination: ReservationView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 6.10.36 PM")
@@ -253,7 +253,7 @@ struct EarhartDisplay: View {
                 .font(.title3)
                 .fontWeight(.bold)
                 .padding(.top)
-            NavigationLink(destination: ReservationView()) {
+            NavigationLink(destination: ReservationView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 6.28.53 PM")
@@ -302,7 +302,7 @@ struct WileyDisplay: View {
                 .font(.title3)
                 .fontWeight(.bold)
                 .padding(.top)
-            NavigationLink(destination: ReservationView()) {
+            NavigationLink(destination: ReservationView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 6.31.47 PM")
@@ -351,7 +351,7 @@ struct WindsorDisplay: View {
                 .font(.title3)
                 .fontWeight(.bold)
                 .padding(.top)
-            NavigationLink(destination: ReservationView()) {
+            NavigationLink(destination: ReservationView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 8.00.35 PM")
@@ -400,7 +400,7 @@ struct FordDisplay: View {
                 .font(.title3)
                 .fontWeight(.bold)
                 .padding(.top)
-            NavigationLink(destination: ReservationView()) {
+            NavigationLink(destination: ReservationView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 8.09.47 PM")

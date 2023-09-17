@@ -14,9 +14,9 @@ class NewReservation: ObservableObject {
     @Published var reservations: [String: [String: Any]] = [:]
     
     
-    func pushNewReservation(holder: String, date: Date, numOfPeople: Int, description: String) {
-        let hillenbrandRef = ref.child("Reservations").child("Hillenbrand")
-        let myRes = ref.child("My Reservations").child("Hillenbrand")
+    func pushNewReservation(diningHall: String, holder: String, date: Date, numOfPeople: Int, description: String) {
+        let hillenbrandRef = ref.child("Reservations").child(diningHall)
+        let myRes = ref.child("My Reservations").child(diningHall)
         
         // Convert date to a string
         let dateFormatter = DateFormatter()
@@ -29,6 +29,7 @@ class NewReservation: ObservableObject {
         
         // Create a dictionary for the new reservation
         let reservationData: [String: Any] = [
+            "Dining Hall": diningHall,
             "Holder": holder,
             "Date": dateString,
             "Number of People": numOfPeople,
@@ -36,7 +37,7 @@ class NewReservation: ObservableObject {
         ]
         
         let myData: [String: Any] = [
-            "Dining Hall": "Hillenbrand",
+            "Dining Hall": diningHall,
             "Holder": holder,
             "Date": dateString,
             "Number of People": numOfPeople,
@@ -66,16 +67,20 @@ class NewReservation: ObservableObject {
     }
     
     func fetchReservations() {
-            let myRes = ref.child("My Reservations").child("Hillenbrand")
+            let dining_halls = ["Hillenbrand", "Windsor", "Wiley", "Earhart", "Ford"]
+            dining_halls.forEach { item in
+                let myRes = ref.child("My Reservations").child(item)
 
-            myRes.observeSingleEvent(of: .value) { [weak self] (snapshot) in
-                guard let self = self else { return }
-                
-                if snapshot.exists() {
-                    if let value = snapshot.value as? [String: [String: Any]] {
-                        self.reservations = value
+                myRes.observeSingleEvent(of: .value) { [weak self] (snapshot) in
+                    guard let self = self else { return }
+                    
+                    if snapshot.exists() {
+                        if let value = snapshot.value as? [String: [String: Any]] {
+                            self.reservations = value
+                        }
                     }
                 }
             }
+            
         }
 }

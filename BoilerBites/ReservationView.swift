@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReservationView: View {
+    var diningHall: String
     @State var selectedDate: Date = Date()
     @State var name: String = ""
     @State var numberOfPeople: Int = 6
@@ -45,7 +46,7 @@ struct ReservationView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding()
             Button("Submit Reservation") {
-                newRes.pushNewReservation(holder: name, date: selectedDate, numOfPeople: numberOfPeople, description: description)
+                newRes.pushNewReservation(diningHall: diningHall, holder: name, date: selectedDate, numOfPeople: numberOfPeople, description: description)
 
             }
             
@@ -54,8 +55,4 @@ struct ReservationView: View {
     }
 }
 
-struct ReservationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReservationView()
-    }
-}
+
