@@ -18,11 +18,15 @@ struct AvailabilityView: View {
     
     var body: some View {
         VStack {
-            Text("Dining Hall: \(diningHall)")
-            
-            DatePicker("Select Date", selection: $selectedDate, in: Date()...maximumDate, displayedComponents: .date)
-                .padding(.horizontal)
-            
+            Text(diningHall)
+                .font(.title2)
+                .fontWeight(.bold)
+            HStack{
+                DatePicker("Select Date", selection: $selectedDate, in: Date()...maximumDate, displayedComponents: .date)
+                    .padding(.horizontal, 75)
+                Spacer()
+                
+            }
             Button(action: {
                 // Perform the count operation when the button is pressed
                 countReservations()
@@ -30,6 +34,12 @@ struct AvailabilityView: View {
                 Text("Check Availability")
             }
         }
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .frame(width: 300, height: 150)
+                
+        )
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text(alertTitle),
@@ -37,6 +47,12 @@ struct AvailabilityView: View {
                 dismissButton: .default(Text("OK"))
             )
         }
+        .background(
+            Image("Screenshot 2023-09-16 at 11.44.02 PM")
+                .resizable()
+                .frame(width: 700, height: 900)
+        )
+        .edgesIgnoringSafeArea(.all)
     }
     
     func countReservations() {
