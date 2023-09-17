@@ -23,8 +23,13 @@ struct ReservationView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
-            DatePicker("Select Date", selection: $selectedDate, in: Date()...maximumDate)
-                .padding(.horizontal)
+            HStack{
+                DatePicker("Select Date", selection: $selectedDate, in: Date()...maximumDate)
+                    .padding(.horizontal,45)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            
             
             TextField("Reservation Holder", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -33,9 +38,11 @@ struct ReservationView: View {
                 .padding(.horizontal)
             HStack {
                 Text("Party of: ")
+                    .font(.title2)
+                    .multilineTextAlignment(.center)
                 Picker("Number of people", selection: $numberOfPeople) {
                         ForEach(1 ..< 11) {
-                            Text("\($0)")
+                            Text("\($0)").font(.title2)
                         }
                     }
             }
@@ -46,10 +53,25 @@ struct ReservationView: View {
                         .padding()
             Button("Submit Reservation") {
                 newRes.pushNewReservation(holder: name, date: selectedDate, numOfPeople: numberOfPeople, description: description)
+                    
 
             }
             
         }
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white.opacity(0.8))
+                .frame(width: 375, height: 400)
+                
+        )
+        .background(
+            
+            Image("Screenshot 2023-09-17 at 12.09.19 AM")
+                .resizable()
+            
+                .frame(width: 800, height: 1000)
+            
+        )
         .padding(.vertical, 200)
     }
 }
