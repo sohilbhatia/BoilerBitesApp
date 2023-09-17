@@ -10,24 +10,71 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink(destination: DetailView(title: "Hillenbrand")) {
-                    Text("Hillenbrand")
-                }
-                NavigationLink(destination: DetailView(title: "Wiley")) {
-                    Text("Wiley")
-                }
-                NavigationLink(destination: DetailView(title: "Windsor")) {
-                    Text("Windsor")
-                }
-                NavigationLink(destination: DetailView(title: "Earhart")){
-                    Text("Earhart")
-                }
-                NavigationLink(destination: DetailView(title: "Ford")){
-                    Text("Ford")
+            
+            VStack{
+                Text("Your Dining Courts")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .padding(.top)
+                ScrollView {
+                    NavigationLink(destination: HillenbrandDisplay()) {
+                        VStack{
+                            Text("")
+                            Image("Screenshot 2023-09-16 at 5.25.25 PM")
+                                .resizable()
+                                .frame(width: 350, height: 292)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
+                        }
+                        
+                    }
+                    
+                    NavigationLink(destination: WileyDisplay()) {
+                        VStack{
+                            Text("")
+                            Image("Screenshot 2023-09-16 at 5.32.08 PM")
+                                .resizable()
+                                .frame(width: 350, height: 292)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    NavigationLink(destination: WindsorDisplay()) {
+                        VStack{
+                            Text("")
+                            Image("Screenshot 2023-09-16 at 5.43.20 PM")
+                                .resizable()
+                                .frame(width: 350, height: 292)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
+                        }
+                    }
+                    NavigationLink(destination: EarhartDisplay()){
+                        VStack{
+                            Text("")
+                            Image("Screenshot 2023-09-16 at 5.50.59 PM")
+                                .resizable()
+                                .frame(width: 350, height: 292)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
+                        }
+                    }
+                    NavigationLink(destination: FordDisplay()){
+                        VStack{
+                            Text("")
+                            Image("Screenshot 2023-09-16 at 5.53.33 PM")
+                                .resizable()
+                                .frame(width: 350, height: 292)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
+                        }
+                    }
+                    
                 }
             }
-            .navigationTitle("Your Dining Courts")
         }
     }
 }
@@ -52,7 +99,7 @@ struct DetailView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                NavigationLink(destination: myView()) {
+                NavigationLink(destination: ReservationView()) {
                     Text("Make a Reservation")
                         .font(.headline)
                         .padding()
@@ -154,6 +201,246 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
+
+struct HillenbrandDisplay: View {
+    var body: some View{
+        VStack{
+            Text("Hillenbrand Dining Court")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.top)
+            NavigationLink(destination: ReservationView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.10.36 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            NavigationLink(destination: AvailabilityView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.12.56 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            
+            
+            
+            NavigationLink(destination: HillenbrandHoursView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.16.43 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+                
+                
+            }
+            Spacer()
+        }
+        
+    }
+}
+
+struct EarhartDisplay: View {
+    var body: some View{
+        VStack{
+            Text("Earhart Dining Court")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.top)
+            NavigationLink(destination: ReservationView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.28.53 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            NavigationLink(destination: AvailabilityView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.26.15 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            
+            
+            
+            NavigationLink(destination: EarhartHoursView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.24.09 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+                
+                
+            }
+            Spacer()
+        }
+        
+    }
+}
+
+struct WileyDisplay: View {
+    var body: some View{
+        VStack{
+            Text("Wiley Dining Court")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.top)
+            NavigationLink(destination: ReservationView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.31.47 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            NavigationLink(destination: AvailabilityView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.40.48 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            
+            
+            
+            NavigationLink(destination: WileyHoursView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 6.43.42 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+                
+                
+            }
+            Spacer()
+        }
+        
+    }
+}
+
+struct WindsorDisplay: View {
+    var body: some View{
+        VStack{
+            Text("Windsor Dining Court")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.top)
+            NavigationLink(destination: ReservationView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 8.00.35 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            NavigationLink(destination: AvailabilityView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 7.57.09 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            
+            
+            
+            NavigationLink(destination: WindsorHoursView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 7.53.06 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+                
+                
+            }
+            Spacer()
+        }
+        
+    }
+}
+
+struct FordDisplay: View {
+    var body: some View{
+        VStack{
+            Text("Ford Dining Court")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.top)
+            NavigationLink(destination: ReservationView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 8.09.47 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            NavigationLink(destination: AvailabilityView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 8.12.07 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+            }
+            
+            
+            
+            NavigationLink(destination: FordHoursView()) {
+                VStack{
+                    Text("")
+                    Image("Screenshot 2023-09-16 at 8.13.35 PM")
+                        .resizable()
+                        .frame(width: 350, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                }
+                
+                
+            }
+            Spacer()
+        }
+        
+    }
+}
 
 
 
