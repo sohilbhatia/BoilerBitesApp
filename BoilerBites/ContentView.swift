@@ -17,7 +17,7 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .padding(.top)
                 ScrollView {
-                    NavigationLink(destination: HillenbrandDisplay()) {
+                    NavigationLink(destination: HillenbrandDisplay(title: "Hillenbrand")) {
                         VStack{
                             Text("")
                             Image("Screenshot 2023-09-16 at 5.25.25 PM")
@@ -29,7 +29,7 @@ struct ContentView: View {
                         
                     }
                     
-                    NavigationLink(destination: WileyDisplay()) {
+                    NavigationLink(destination: WileyDisplay(title: "Wiley")) {
                         VStack{
                             Text("")
                             Image("Screenshot 2023-09-16 at 5.32.08 PM")
@@ -42,7 +42,7 @@ struct ContentView: View {
                         
                         
                     }
-                    NavigationLink(destination: WindsorDisplay()) {
+                    NavigationLink(destination: WindsorDisplay(title: "Windsor")) {
                         VStack{
                             Text("")
                             Image("Screenshot 2023-09-16 at 5.43.20 PM")
@@ -52,7 +52,7 @@ struct ContentView: View {
                             
                         }
                     }
-                    NavigationLink(destination: EarhartDisplay()){
+                    NavigationLink(destination: EarhartDisplay(title: "Earhart")){
                         VStack{
                             Text("")
                             Image("Screenshot 2023-09-16 at 5.50.59 PM")
@@ -62,7 +62,7 @@ struct ContentView: View {
                             
                         }
                     }
-                    NavigationLink(destination: FordDisplay()){
+                    NavigationLink(destination: FordDisplay(title: "Ford")){
                         VStack{
                             Text("")
                             Image("Screenshot 2023-09-16 at 5.53.33 PM")
@@ -196,6 +196,8 @@ struct ContentView_Previews: PreviewProvider {
 
 
 struct HillenbrandDisplay: View {
+    var title: String
+    
     var body: some View{
         VStack{
             Text("Hillenbrand Dining Court")
@@ -212,7 +214,7 @@ struct HillenbrandDisplay: View {
                     
                 }
             }
-            NavigationLink(destination: AvailabilityView()) {
+            NavigationLink(destination: AvailabilityView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 6.12.56 PM")
@@ -244,6 +246,7 @@ struct HillenbrandDisplay: View {
 }
 
 struct EarhartDisplay: View {
+    var title: String
     var body: some View{
         VStack{
             Text("Earhart Dining Court")
@@ -260,7 +263,7 @@ struct EarhartDisplay: View {
                     
                 }
             }
-            NavigationLink(destination: AvailabilityView()) {
+            NavigationLink(destination: AvailabilityView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 6.26.15 PM")
@@ -292,6 +295,7 @@ struct EarhartDisplay: View {
 }
 
 struct WileyDisplay: View {
+    var title: String
     var body: some View{
         VStack{
             Text("Wiley Dining Court")
@@ -308,7 +312,7 @@ struct WileyDisplay: View {
                     
                 }
             }
-            NavigationLink(destination: AvailabilityView()) {
+            NavigationLink(destination: AvailabilityView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 6.40.48 PM")
@@ -340,6 +344,7 @@ struct WileyDisplay: View {
 }
 
 struct WindsorDisplay: View {
+    var title: String
     var body: some View{
         VStack{
             Text("Windsor Dining Court")
@@ -356,7 +361,7 @@ struct WindsorDisplay: View {
                     
                 }
             }
-            NavigationLink(destination: AvailabilityView()) {
+            NavigationLink(destination: AvailabilityView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 7.57.09 PM")
@@ -388,6 +393,7 @@ struct WindsorDisplay: View {
 }
 
 struct FordDisplay: View {
+    var title: String
     var body: some View{
         VStack{
             Text("Ford Dining Court")
@@ -404,7 +410,7 @@ struct FordDisplay: View {
                     
                 }
             }
-            NavigationLink(destination: AvailabilityView()) {
+            NavigationLink(destination: AvailabilityView(diningHall: title)) {
                 VStack{
                     Text("")
                     Image("Screenshot 2023-09-16 at 8.12.07 PM")
